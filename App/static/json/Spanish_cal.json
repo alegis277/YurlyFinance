@@ -1,0 +1,33 @@
+
+
+{
+	"sProcessing":     "Procesando...",
+	"sLengthMenu":     "Mostrar _MENU_ dispositivos calibrados",
+	"sZeroRecords":    "No se han encontrado dispositivos calibrados",
+	"sEmptyTable":     "No se han encontrado dispositivos calibrados",
+	"sInfo":           "Mostrando dispositivos calibrados del _START_ al _END_ de un total de _TOTAL_ dispositivos calibrados",
+	"sInfoEmpty":      "Mostrando dispositivos calibrados del 0 al 0 de un total de 0 dispositivos calibrados",
+	"sInfoFiltered":   "(filtrado de un total de _MAX_ dispositivos calibrados)",
+	"sInfoPostFix":    "",
+	"sSearch":         "Buscar:",
+	"sUrl":            "",
+	"sInfoThousands":  ",",
+	"sLoadingRecords": "Cargando...",
+	"oPaginate": {
+		"sFirst":    "Primero",
+		"sLast":     "Último",
+		"sNext":     "Siguiente",
+		"sPrevious": "Anterior"
+	},
+	"oAria": {
+		"sSortAscending":  ": Activar para ordenar la columna de manera ascendente",
+		"sSortDescending": ": Activar para ordenar la columna de manera descendente"
+	},
+	"select": {
+		"rows": {
+			"_": "%d dispositivos calibrados seleccionados",
+			"0": "",
+			"1": "%d dispositivo calibrado seleccionado"
+		}
+	}
+}

@@ -1,0 +1,7 @@
+Django
+dj-static
+mysqlclient
+numpy
+boto3
+django-storages
+pandas

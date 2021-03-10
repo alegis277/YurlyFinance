@@ -1,0 +1,33 @@
+
+
+{
+	"sProcessing":     "Procesando...",
+	"sLengthMenu":     "Mostrar _MENU_ calibraciones",
+	"sZeroRecords":    "No se han encontrado calibraciones",
+	"sEmptyTable":     "No se han encontrado calibraciones",
+	"sInfo":           "Mostrando calibraciones del _START_ al _END_ de un total de _TOTAL_ calibraciones",
+	"sInfoEmpty":      "Mostrando calibraciones del 0 al 0 de un total de 0 calibraciones",
+	"sInfoFiltered":   "(filtrado de un total de _MAX_ calibraciones)",
+	"sInfoPostFix":    "",
+	"sSearch":         "Buscar:",
+	"sUrl":            "",
+	"sInfoThousands":  ",",
+	"sLoadingRecords": "Cargando...",
+	"oPaginate": {
+		"sFirst":    "Primero",
+		"sLast":     "Último",
+		"sNext":     "Siguiente",
+		"sPrevious": "Anterior"
+	},
+	"oAria": {
+		"sSortAscending":  ": Activar para ordenar la columna de manera ascendente",
+		"sSortDescending": ": Activar para ordenar la columna de manera descendente"
+	},
+	"select": {
+		"rows": {
+			"_": "%d calibraciones seleccionadas",
+			"0": "",
+			"1": "%d calibración seleccionada"
+		}
+	}
+}

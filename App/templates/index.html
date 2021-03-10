@@ -1,0 +1,1408 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>Yurly Finance</title>
+	<meta name="description" content="Aplicación de financias para el FIC Yurly">
+	<meta property="og:title" content="Yurly Finance" />
+	<meta property="og:description" content="Aplicación de financias para el FIC Yurly">
+	<meta property="og:image" content="https://staticyurlyfinance.s3.us-east-2.amazonaws.com/static/trii.png">
+	<meta property="og:type" content="dashboard" />
+	<meta property="og:locale" content="es_CO" />
+	<meta name="referrer" content="no-referrer-when-downgrade">
+	<meta name="format-detection" content="telephone=no">
+
+	<!-- Custom fonts for this template-->
+	<link href="{% static 'css/fontGoogle.css' %}" rel="stylesheet">
+
+	<!-- Custom styles for this template-->
+	<!-- CSS only -->
+	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+
+
+	<!-- JS, Popper.js, and jQuery -->
+	<script src="{% static 'js/jquery-3.5.1.min.js' %}"></script>
+	<script src="{% static 'vendor/bootstrap/js/popper.js' %}"></script>
+	<script src="{% static 'vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+
+	
+
+	<link rel="stylesheet" type="text/css" href="{% static 'css/all.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/sb-admin-2.css' %}">
+
+
+	<style type="text/css">
+		/* for sm */
+
+		.custom-switch.custom-switch-sm .custom-control-label {
+			padding-left: 1rem;
+			padding-bottom: 1rem;
+		}
+
+		.custom-switch.custom-switch-sm .custom-control-label::before {
+			height: 1rem;
+			width: calc(1rem + 0.75rem);
+			border-radius: 2rem;
+		}
+
+		.custom-switch.custom-switch-sm .custom-control-label::after {
+			width: calc(1rem - 4px);
+			height: calc(1rem - 4px);
+			border-radius: calc(1rem - (1rem / 2));
+		}
+
+		.custom-switch.custom-switch-sm .custom-control-input:checked ~ .custom-control-label::after {
+			transform: translateX(calc(1rem - 0.25rem));
+		}
+
+		/* for md */
+
+		.custom-switch.custom-switch-md .custom-control-label {
+			padding-left: 2rem;
+			padding-bottom: 1.5rem;
+		}
+
+		.custom-switch.custom-switch-md .custom-control-label::before {
+			height: 1.5rem;
+			width: calc(2rem + 0.75rem);
+			border-radius: 3rem;
+		}
+
+		.custom-switch.custom-switch-md .custom-control-label::after {
+			width: calc(1.5rem - 4px);
+			height: calc(1.5rem - 4px);
+			border-radius: calc(2rem - (1.5rem / 2));
+		}
+
+		.custom-switch.custom-switch-md .custom-control-input:checked ~ .custom-control-label::after {
+			transform: translateX(calc(1.5rem - 0.25rem));
+		}
+
+		/* for lg */
+
+		.custom-switch.custom-switch-lg .custom-control-label {
+			padding-left: 3rem;
+			padding-bottom: 2rem;
+		}
+
+		.custom-switch.custom-switch-lg .custom-control-label::before {
+			height: 2rem;
+			width: calc(3rem + 0.75rem);
+			border-radius: 4rem;
+		}
+
+		.custom-switch.custom-switch-lg .custom-control-label::after {
+			width: calc(2rem - 4px);
+			height: calc(2rem - 4px);
+			border-radius: calc(3rem - (2rem / 2));
+		}
+
+		.custom-switch.custom-switch-lg .custom-control-input:checked ~ .custom-control-label::after {
+			transform: translateX(calc(2rem - 0.25rem));
+		}
+
+		/* for xl */
+
+		.custom-switch.custom-switch-xl .custom-control-label {
+			padding-left: 4rem;
+			padding-bottom: 2.5rem;
+		}
+
+		.custom-switch.custom-switch-xl .custom-control-label::before {
+			height: 2.5rem;
+			width: calc(4rem + 0.75rem);
+			border-radius: 5rem;
+		}
+
+		.custom-switch.custom-switch-xl .custom-control-label::after {
+			width: calc(2.5rem - 4px);
+			height: calc(2.5rem - 4px);
+			border-radius: calc(4rem - (2.5rem / 2));
+		}
+
+		.custom-switch.custom-switch-xl .custom-control-input:checked ~ .custom-control-label::after {
+			transform: translateX(calc(2.5rem - 0.25rem));
+		}
+	</style>
+
+
+
+</head>
+
+<body id="page-top">
+
+	
+	<!-- Page Wrapper -->
+	<div id="wrapper">
+
+		<!-- Sidebar -->
+		<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+			<!-- Sidebar - Brand -->
+			<a class="sidebar-brand d-flex align-items-center justify-content-center" href="/">
+				<div class="sidebar-brand-text mx-3"><img src="{% static 'img/logo.png' %}" style="width: 110%"></div>
+				<div class="mx-3"><img src="{% static 'img/icon-only.png' %}" style="width: 67%;margin-left: 0.5rem;" class="d-block d-sm-block d-md-none"></div>
+			</a>
+
+			<!-- Divider -->
+			<hr class="sidebar-divider my-0">
+
+			<!-- Nav Item - Dashboard -->
+			<li class="nav-item active">
+				<a class="nav-link" href="/">
+					<i class="fas fa-fw fa-tachometer-alt"></i>
+					<span>Estado</span></a>
+				</li>
+
+				<!-- Divider -->
+				<hr class="sidebar-divider">
+
+				<!-- Heading -->
+				<div class="sidebar-heading">
+					Adquisición
+				</div>
+
+				<!-- Nav Item - Pages Collapse Menu -->
+				<li class="nav-item">
+					<a class="nav-link" href="/createExperiment">
+						<i class="fas fa-fw fa-vial"></i>
+						<span>Experimentos</span>
+					</a>
+				</li>
+
+				<li class="nav-item">
+					<a class="nav-link" href="/dataAcquisition">
+						<i class="fas fa-fw fa-chart-area"></i>
+						<span>Adquirir datos</span>
+					</a>
+				</li>
+
+				<li class="nav-item">
+					<a class="nav-link" href="/calibrations">
+						<i class="fas fa-fw fa-ruler-triangle"></i>
+						<span>Calibraciones</span>
+					</a>
+				</li>
+
+				<!-- Heading -->
+				<div class="sidebar-heading" style="margin-top: 20px;">
+					Entrenamiento
+				</div>
+
+
+				<li class="nav-item">
+					<a class="nav-link" href="/exportData">
+						<i class="fas fa-fw fa-download"></i>
+						<span>Exportar datos</span>
+					</a>
+				</li>
+
+
+
+				<!-- Heading -->
+				<div class="sidebar-heading" style="margin-top: 20px;">
+					Configuración
+				</div>
+
+				<!-- Nav Item - Pages Collapse Menu -->
+
+				<li class="nav-item">
+					<label class="nav-link collapsed" data-toggle="collapse" data-target="#collapseConfigLengua" aria-expanded="true" aria-controls="collapseConfigLengua" style="cursor: pointer;">
+						<i class="fas fa-fw fa-cog"></i>
+						<span>Lengua</span>
+					</label>
+					<div id="collapseConfigLengua" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+						<div class="bg-white py-2 collapse-inner rounded">
+							<h6 class="collapse-header">Lengua:</h6>
+							<a class="collapse-item" href="/basicConfiguration">Configuración básica</a>
+							<a class="collapse-item" href="/advancedConfiguration">Configuración avanzada</a>
+						</div>
+					</div>
+				</li>
+
+
+
+
+			</ul>
+			<!-- End of Sidebar -->
+
+			<!-- Content Wrapper -->
+			<div id="content-wrapper" class="d-flex flex-column">
+
+				<!-- Main Content -->
+				<div id="content">
+
+					<!-- Topbar -->
+					<nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+						<!-- Sidebar Toggle (Topbar) -->
+						<button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+							<i class="fa fa-bars"></i>
+						</button>
+
+
+					</form>
+
+					<!-- Topbar Navbar -->
+					<ul class="navbar-nav ml-auto">
+
+
+						<!-- Nav Item - Alerts -->
+						<li class="nav-item dropdown no-arrow mx-1">
+							<a class="nav-link dropdown-toggle" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<i class="fas fa-bell fa-fw"></i>
+								<!-- Counter - Alerts -->
+								<span class="badge badge-danger badge-counter" style="visibility: hidden;" id="notificationsCounter">0</span>
+							</a>
+							<!-- Dropdown - Alerts -->
+							<div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown" id="innerDrop">
+								<h6 class="dropdown-header">
+									Centro de notificaciones
+								</h6>
+
+								<div id = 'notifications'>
+								</div>
+
+								<a class="dropdown-item text-center small text-gray-500" href="#">Mostrar todos los registros</a>
+							</div>
+						</li>
+
+
+
+						<div class="topbar-divider d-none d-sm-block"></div>
+
+						<!-- Nav Item - User Information -->
+						<li class="nav-item dropdown no-arrow">
+							<a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<span class="mr-2 d-none d-lg-inline text-gray-600 small">{{request.user.first_name}}</span>
+								<img id = "userImage" class="img-profile rounded-circle" src="{% static 'img/'|add:request.user.username %}.jpeg">
+
+							</a>
+							<!-- Dropdown - User Information -->
+							<div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+								<a class="dropdown-item" href="#">
+									<i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+									Mis permisos
+								</a>
+								<a class="dropdown-item" href="#">
+									<i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+									Registro de actividad
+								</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+									<i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+									Salir
+								</a>
+							</div>
+						</li>
+
+					</ul>
+
+				</nav>
+				<!-- End of Topbar -->
+
+				<!-- Begin Page Content -->
+				<div class="container-fluid">
+
+					<!-- Page Heading -->
+					<div class="d-sm-flex align-items-center justify-content-between mb-4">
+						<h1 class="h3 mb-0 text-gray-800">Estado del sistema</h1>
+						<label class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" onclick="scanI2C()" id="scanI2CButton"><i class="fas fa-sync-alt fa-sm text-white-50"></i> Escanear I<sup>2</sup>C</label>
+					</div>
+
+					<!-- Content Row -->
+					<div class="row">
+
+						<!-- Earnings (Monthly) Card Example -->
+						<div class="col-xl-3 col-md-6 mb-4">
+							<div class="card border-left-primary shadow h-100 py-2">
+								<div class="card-body">
+									<div class="row no-gutters align-items-center">
+										<div class="col mr-2">
+											<div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Tiempo encendido</div>
+											<div class="h5 mb-0 font-weight-bold text-gray-800" id="liveTimeLabel">--h --m --s</div>
+										</div>
+										<div class="col-auto">
+											<i class="fas fa-clock fa-2x text-gray-300"></i>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Earnings (Monthly) Card Example -->
+						<div class="col-xl-3 col-md-6 mb-4">
+							<div class="card border-left-success shadow h-100 py-2">
+								<div class="card-body">
+									<div class="row no-gutters align-items-center">
+										<div class="col mr-2">
+											<div class="text-xs font-weight-bold text-success text-uppercase mb-1">Lenguas electrónicas detectadas</div>
+											<div class="h5 mb-0 font-weight-bold text-gray-800" id="tonguesDetectedLabel">-</div>
+										</div>
+										<div class="col-auto">
+											<i class="fas fa-hdd fa-2x text-gray-300"></i>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Earnings (Monthly) Card Example -->
+						<div class="col-xl-3 col-md-6 mb-4">
+							<div class="card border-left-info shadow h-100 py-2">
+								<div class="card-body">
+									<div class="row no-gutters align-items-center">
+										<div class="col mr-2">
+											<div class="text-xs font-weight-bold text-info text-uppercase mb-1">Sensores de nariz detectados</div>
+											<div class="h5 mb-0 font-weight-bold text-gray-800" id = 'noseDetectedLabel'>-</div>
+										</div>
+										<div class="col-auto">
+											<i class="fas fa-hdd fa-2x text-gray-300"></i>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Pending Requests Card Example -->
+						<div class="col-xl-3 col-md-6 mb-4">
+							<div class="card border-left-warning shadow h-100 py-2">
+								<div class="card-body">
+									<div class="row no-gutters align-items-center">
+										<div class="col mr-2">
+											<div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Sensores de pH detectados</div>
+											<div class="h5 mb-0 font-weight-bold text-gray-800" id="phDetectedLabel">-</div>
+										</div>
+										<div class="col-auto">
+											<i class="fas fa-vial fa-2x text-gray-300"></i>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+
+
+
+
+
+
+
+
+
+					<!-- Content Row -->
+
+					<div class="row">
+						<!-- Area Chart -->
+						<div class="col-xl col-lg">
+							<div class="card shadow mb-4">
+								<!-- Card Header - Dropdown -->
+								<div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+									<h6 class="m-0 font-weight-bold text-success">Lenguas electrónicas</h6>
+								</div>
+								<!-- Card Body -->
+								<div class="card-body" id="bodyTongue">
+									<label style="text-align: center;display: inherit;" id="warning_tongues">No se han encontado dispositivos</label>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+
+					<!-- Content Row -->
+
+					<div class="row">
+						<!-- Area Chart -->
+						<div class="col-xl col-lg">
+							<div class="card shadow mb-4">
+								<!-- Card Header - Dropdown -->
+								<div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+									<h6 class="m-0 font-weight-bold text-info">Sensores de nariz electrónica</h6>
+								</div>
+								<!-- Card Body -->
+								<div class="card-body">
+									<label style="text-align: center;display: inherit;" id="warning_noses">No se han encontado dispositivos</label>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+
+					<!-- Content Row -->
+
+					<div class="row">
+						<!-- Area Chart -->
+						<div class="col-xl col-lg">
+							<div class="card shadow mb-4">
+								<!-- Card Header - Dropdown -->
+								<div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+									<h6 class="m-0 font-weight-bold text-warning">Sensores de pH</h6>
+								</div>
+								<!-- Card Body -->
+								<div class="card-body" id="bodyPH">
+									<label style="text-align: center;display: inherit;" id="warning_phs">No se han encontado dispositivos</label>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+					
+					<!-- End of Main Content -->
+
+					<!-- Footer -->
+					<footer class="sticky-footer bg-white">
+						<div class="container my-auto">
+							<div class="copyright text-center my-auto">
+								<span>SensesCube {{VERSION}} - Copyright &copy; Nuxtu 2020</span>
+							</div>
+						</div>
+					</footer>
+					<!-- End of Footer -->
+
+				</div>
+				<!-- End of Content Wrapper -->
+
+			</div>
+			<!-- End of Page Wrapper -->
+
+			<!-- Scroll to Top Button-->
+
+
+			<!-- Logout Modal-->
+			<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="padding-right: 0 !important">
+				<div class="modal-dialog modal-dialog-centered" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="exampleModalLabel">Listo para salir?</h5>
+							<button class="close" type="button" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">×</span>
+							</button>
+						</div>
+						<div class="modal-body">Seleccione "Salir" para terminar con su sesión actual.</div>
+						<div class="modal-footer">
+							<button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+							<a class="btn btn-primary" href="/logout_user">Salir</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+			<div id="modals">
+			</div>
+
+
+			
+
+		</div>
+
+
+
+
+
+	</body>
+
+	<script src="{% static 'js/sb-admin-2.js' %}"></script>
+
+	<script type="text/javascript">
+
+		phIDcurrent = []
+		tongueIDcurrent = []
+		currentVoltamperometricManual = -1
+		readyForManual = {}
+
+		$(document).on('click', '#innerDrop', function (e) {
+			e.stopPropagation();
+		});
+
+		addr = 'ws://'+$(location).attr('href').replace("http://", "").replace("#", "")+'ws/bgUpdate_Status/'
+		mainSocket = new WebSocket(addr);
+
+		mainSocket.onmessage = function(e) {
+			var data = JSON.parse(e.data);
+
+			if (data.innerType == "statusMain")
+			{
+
+				$("#liveTimeLabel").html(data.liveTime)
+				$("#tonguesDetectedLabel").html(data.tongueCount)
+				$("#phDetectedLabel").html(data.phCount)
+				$("#noseDetectedLabel").html(data.noseCount)
+
+
+				if(data.phCount == 0)
+				{
+					$("#warning_phs").css({"display":"inherit"})
+				}
+				else
+				{
+					$("#warning_phs").css({"display":"none"})
+				}
+
+
+
+			// PH SENSORS
+			for (var i = 0; i < data.phCount; i++) {
+				id = data.phIdArray[i]
+				status = data.phStatusArray[i]
+				voltage = data.phVoltageArray[i]
+				
+				ph = data.phphArray[i]
+
+				if(!isNaN(parseFloat(ph)))
+				{
+					ph = ph.toFixed(2)
+				}
+
+				i2c = data.phI2CArray[i]
+				creation = data.phCreationDataArray[i]
+				calDate = data.phLastCalArray[i]
+
+				if (status == "En espera")
+				{
+					color = 'success'
+				}
+				else if (status == "En experimento")
+				{
+					color = 'warning'
+				}
+				else if (status == "En calibración")
+				{
+					color = 'warning'
+				}
+				else
+				{
+					color = 'danger'
+				}
+				if (phIDcurrent.includes(id))
+				{
+					$("#status_"+id).html(status)
+					$("#voltage_"+id).html(voltage)
+					$("#ph_"+id).html(ph)
+					$("#calDate_"+id).html(calDate)
+
+					$("#status_"+id).attr("class", "m-0 text-"+color+" font-weight-bold")
+
+				}
+				else
+				{
+					
+					$('#bodyPH').append(`<div class="card shadow mb-1 card-flex">
+						<div class="card-header py-3">
+						<h6 class="m-0 font-weight-bold" style="color: #226e71;">Sensor de pH (ID: <span id='id_${id}'>${id}</span>)</h6>
+						</div>
+						<div class="card-body">
+						<h6 style="display: inline-block;margin-right: 5px">Estado: <h6 class="m-0 text-${color} font-weight-bold" style="display: inline-block;" id='status_${id}'>${status}</h6></h6><br>
+						<h6 style="display: inline-block;margin-right: 5px">Voltaje: <h6 class="m-0 font-weight-bold" style="display: inline-block;"><span id='voltage_${id}'>${voltage}</span>mV</h6></h6><br>
+						<h6 style="display: inline-block;margin-right: 5px">pH: <h6 class="m-0 font-weight-bold" style="display: inline-block;" id='ph_${id}'>${ph}</h6></h6><br>
+						<h6 style="display: inline-block;margin-right: 5px">Dirección I<sup>2</sup>C: <h6 class="m-0 font-weight-bold" style="display: inline-block;" id='i2c_${id}'>${i2c}</h6></h6><br>
+						<h6 style="display: inline-block;margin-right: 5px">Fecha de creación: <h6 class="m-0 font-weight-bold" style="display: inline-block;" id='creation_${id}'>${creation}</h6></h6><br>
+						<h6 style="display: inline-block;margin-right: 5px">Última calibración: <h6 class="m-0 font-weight-bold" style="display: inline-block;" id='calDate_${id}'>${calDate}</h6></h6><br>
+						</div>
+						</div>`)
+					phIDcurrent.push(id)
+				}
+			}
+
+
+			// ELECTRONIC TONGUES
+
+			if(data.tongueCount == 0)
+			{
+				$("#warning_tongues").css({"display":"inherit"})
+			}
+			else
+			{
+				$("#warning_tongues").css({"display":"none"})
+			}
+
+
+			for (var i = 0; i < data.tongueCount; i++) {
+				id = data.tongueIdArray[i]
+				status = data.tongueStatusArray[i]
+				electrodeCount = data.tongueElectrodeCountArray[i]
+				type = data.tongueTypeArray[i]
+				i2c = data.tongueI2CArray[i]
+				pcbTemp = data.tonguePCBTempArray[i].toFixed(2)
+				creationDate = data.tongueCreationDataArray[i]
+				calDate = data.tongueLastCalArray[i]
+
+				electrodeVoltages = data.tongueVoltagesArray[i]
+				electrodeTemperatures = data.tongueTemperaturesArray[i]
+				electrodeRefs = data.tongueVRefArray[i]
+
+				eletrodesString = ""
+				for (var j=0; j < electrodeCount; j++) eletrodesString = eletrodesString+" / "+data.tongueElectrodesArray[i][j];
+					eletrodesString = eletrodesString.substring(3)
+
+				
+
+
+				currentConstantString = ""
+				for (var j=0; j < electrodeCount; j++) currentConstantString = currentConstantString+" / "+data.tongueCurrentConstantsArray[i][j]+" 	&Omega;";
+					currentConstantString = currentConstantString.substring(3)
+
+				if (data.tongueElectrodesArray[i].includes("") | data.tongueCurrentConstantsArray[i].includes(""))
+					readyForManual[id] = false
+				else
+					readyForManual[id] = true
+
+
+				if (status == "En espera")
+				{
+					color = 'success'
+				}
+				else if (status == "En experimento")
+				{
+					color = 'warning'
+				}
+				else if (status == "En calibración")
+				{
+					color = 'warning'
+				}
+				else
+				{
+					color = 'danger'
+				}
+
+
+				target = 'modalTongueData_'+id
+
+
+				if (tongueIDcurrent.includes(id))
+				{
+					$("#status_"+id).html(status)
+					$("#pcbTemp_"+id).html(pcbTemp)
+
+					$("#modal_status_"+id).html(status)
+					$("#modal_pcbTemp_"+id).html(pcbTemp)
+
+					$("#status_"+id).attr("class", "m-0 text-"+color+" font-weight-bold")
+					$("#modal_status_"+id).attr("class", "m-0 text-"+color+" font-weight-bold")
+
+					$("#modal_calDate_"+id).html(calDate)
+					$("#modal_electrodes_"+id).html(eletrodesString)
+
+					if(type == "Potenciométrica")
+					{
+						for (var x = 0; x < electrodeCount; x++) {
+							$("#divVoltages_"+id+"_"+x).html(electrodeVoltages[x]+" mV")
+							$("#divVoltages_"+id+"_"+x).attr('aria-valuenow', electrodeVoltages[x])
+							$("#divVoltages_"+id+"_"+x).css('width', electrodeVoltages[x]/50 + "%")
+						}
+						for (var x = 0; x < electrodeCount; x++) {
+							$("#divTemperatures_"+id+"_"+x).html(electrodeTemperatures[x]+" &#176;C")
+							$("#divTemperatures_"+id+"_"+x).attr('aria-valuenow', electrodeTemperatures[x])
+							$("#divTemperatures_"+id+"_"+x).css('width', electrodeTemperatures[x]/0.5 + "%")
+						}
+						for (var x = 0; x < electrodeCount; x++) {
+							$("#divRefs_"+id+"_"+x).html(electrodeRefs[x]+" V")
+							$("#divRefs_"+id+"_"+x).attr('aria-valuenow', electrodeRefs[x])
+							$("#divRefs_"+id+"_"+x).css('width', electrodeRefs[x]/0.05 + "%")
+						}
+					}
+					else if (type == "Voltamperométrica")
+					{
+						$("#divVoltages_"+id+"_ref").html(electrodeVoltages[electrodeVoltages.length-2].toFixed(2)+" mV")
+						$("#divVoltages_"+id+"_ref").attr('aria-valuenow', electrodeVoltages[electrodeVoltages.length-2])
+						$("#divVoltages_"+id+"_ref").css('width', 10+(((12000+electrodeVoltages[electrodeVoltages.length-2])/240)*0.8) + "%")
+
+						$("#divVoltages_"+id+"_count").html(electrodeVoltages[electrodeVoltages.length-1].toFixed(2)+" mV")
+						$("#divVoltages_"+id+"_count").attr('aria-valuenow', electrodeVoltages[electrodeVoltages.length-1])
+						$("#divVoltages_"+id+"_count").css('width', 10+(((12000+electrodeVoltages[electrodeVoltages.length-1])/240)*0.8) + "%")
+
+						$("#divTemperatures_"+id+"_liq").html(electrodeTemperatures[0]+" &#176;C")
+						$("#divTemperatures_"+id+"_liq").attr('aria-valuenow', electrodeTemperatures[0])
+						$("#divTemperatures_"+id+"_liq").css('width', electrodeTemperatures[0] + "%")
+
+
+
+						$("#divVoltages_modal_"+id+"_ref").html(electrodeVoltages[electrodeVoltages.length-2].toFixed(2)+" mV")
+						$("#divVoltages_modal_"+id+"_ref").attr('aria-valuenow', electrodeVoltages[electrodeVoltages.length-2])
+						$("#divVoltages_modal_"+id+"_ref").css('width', 10+(((12000+electrodeVoltages[electrodeVoltages.length-2])/240)*0.8) + "%")
+
+						$("#divVoltages_modal_"+id+"_count").html(electrodeVoltages[electrodeVoltages.length-1].toFixed(2)+" mV")
+						$("#divVoltages_modal_"+id+"_count").attr('aria-valuenow', electrodeVoltages[electrodeVoltages.length-1])
+						$("#divVoltages_modal_"+id+"_count").css('width', 10+(((12000+electrodeVoltages[electrodeVoltages.length-1])/240)*0.8) + "%")
+
+						$("#divTemperatures_modal_"+id+"_liq").html(electrodeTemperatures[0]+" &#176;C")
+						$("#divTemperatures_modal_"+id+"_liq").attr('aria-valuenow', electrodeTemperatures[0])
+						$("#divTemperatures_modal_"+id+"_liq").css('width', electrodeTemperatures[0]/0.5 + "%")
+
+
+
+						$("#modal_currentConstants_"+id).html(currentConstantString)
+
+
+						$("#modal_manual_status_"+id).html(status)
+						$("#modal_manual_pcbTemp_"+id).html(pcbTemp)
+						$("#modal_manual_status_"+id).attr("class", "m-0 text-"+color+" font-weight-bold")
+						$("#modal_manual_electrodes_"+id).html(eletrodesString)
+						$("#modal_manual_currentConstants_"+id).html(currentConstantString)
+
+						for (var x = 0; x < electrodeCount; x++) {
+							$("#current_"+id+"_"+x).html(((electrodeVoltages[x]*1000)/data.tongueCurrentConstantsArray[i][x]).toFixed(2))
+
+							$("#radio_"+id+"_"+x).val(data.tongueElectrodesArray[i][x])
+							$("#labelfor_radio_"+id+"_"+x).html(data.tongueElectrodesArray[i][x])
+						}
+
+						if (readyForManual[id])
+						{
+							$("#manualButton_"+id).attr("data-toggle", "modal")
+						}
+						else
+						{
+							$("#manualButton_"+id).removeAttr("data-toggle")
+						}
+
+
+
+
+					}
+
+
+
+				}
+				else
+				{
+
+					$('#bodyTongue').append(`<div class="card shadow mb-1 card-flex" style='cursor:pointer;' data-toggle="modal" data-target="#${target}">
+						<div class="card-header py-3">
+						<h6 class="m-0 font-weight-bold" style="color: #226e71;">Lengua electrónica (ID: <span id='id_${id}'>${id}</span>)</h6>
+						</div>
+						<div class="card-body">
+						<h6 style="display: inline-block;margin-right: 5px">Estado: <h6 class="m-0 text-${color} font-weight-bold" style="display: inline-block;" id='status_${id}'>${status}</h6></h6><br>
+						<h6 style="display: inline-block;margin-right: 5px">Número de electrodos: <h6 class="m-0 font-weight-bold" style="display: inline-block;" id='electrodeCount_${id}'>${electrodeCount}</h6></h6><br>
+						<h6 style="display: inline-block;margin-right: 5px">Tipo: <h6 class="m-0 font-weight-bold" style="display: inline-block;" id='type_${id}'>${type}</h6></h6><br>
+						<h6 style="display: inline-block;margin-right: 5px">Dirección I<sup>2</sup>C: <h6 class="m-0 font-weight-bold" style="display: inline-block;" id='i2c_${id}'>${i2c}</h6></h6><br>
+						<h6 style="display: inline-block;margin-right: 5px">Temperatura de placa:<h6 class="m-0 font-weight-bold" style="display: inline-block;"><span id='pcbTemp_${id}'>${pcbTemp}</span>&#176;C</h6></h6><br>
+						</div>
+						</div>`)
+
+
+
+
+					if (type == "Potenciométrica")
+					{
+
+						divVoltages = ""
+						divTemperatures = ""
+						divRefs = ""
+
+						for (var x = 0; x < electrodeCount; x++) {
+							divVoltages += `
+							<div class="progress progress-sm mr-2" style="height: 20px;margin-bottom: 10px">
+							<div id = "divVoltages_${id}_${x}" class="progress-bar bg-info" role="progressbar" style="width: ${electrodeVoltages[x]/50}%;height: 20px" aria-valuenow="${electrodeVoltages[x]}" aria-valuemin="0" aria-valuemax="5000">${electrodeVoltages[x]} mV</div>
+							</div>
+							`
+						}
+
+						for (var x = 0; x < electrodeCount; x++) {
+							divTemperatures += `
+							<div class="progress progress-sm mr-2" style="height: 20px;margin-bottom: 10px">
+							<div id = "divTemperatures_${id}_${x}" class="progress-bar bg-danger" role="progressbar" style="width: ${electrodeTemperatures[x]/0.5}%;height: 20px" aria-valuenow="${electrodeTemperatures[x]}" aria-valuemin="0" aria-valuemax="50">${electrodeTemperatures[x]} &#176;C</div>
+							</div>
+							`
+						}
+
+						for (var x = 0; x < electrodeCount; x++) {
+							divRefs += `
+							<div class="progress progress-sm mr-2" style="height: 20px;margin-bottom: 10px">
+							<div id = "divRefs_${id}_${x}" class="progress-bar bg-alert" role="progressbar" style="width: ${electrodeRefs[x]/0.05}%;height: 20px" aria-valuenow="${electrodeRefs[x]}" aria-valuemin="0" aria-valuemax="5">${electrodeRefs[x]} V</div>
+							</div>
+							`
+						}
+
+
+						$('#modals').append(`<div class="modal fade" id="${target}" role="dialog" style="overflow-y: auto;">
+							<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+							<div class="modal-content">
+							<div class="modal-header">
+							<h5 class="modal-title" id="exampleModalLabel">Lengua electrónica ID: ${id} <i class="fas fa-cog fa-sm button" style="cursor:pointer;margin-left:10px" data-target="#configTonguePot_${id}" data-toggle="modal" onclick="$('#${target}').modal('hide');requestElectrodesInfo(${id});"></i></h5>
+
+							<button class="close" type="button" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">×</span>
+							</button>
+							</div>
+							<div class="modal-body">
+
+							<div id='warnings_${id}'></div>
+
+							<h6 style="display: inline-block;margin-right: 5px">Estado: <h6 class="m-0 text-success font-weight-bold" style="display: inline-block;" id='modal_status_${id}'>${status}</h6></h6><br>
+							<h6 style="display: inline-block;margin-right: 5px">Número de electrodos: <h6 class="m-0 font-weight-bold" style="display: inline-block;" id='modal_electrodeCount_${id}'>${electrodeCount}</h6></h6><br>
+							<h6 style="display: inline-block;margin-right: 5px">Tipo: <h6 class="m-0 font-weight-bold" style="display: inline-block;" id='modal_type_${id}'>${type}</h6></h6><br>
+							<h6 style="display: inline-block;margin-right: 5px">Dirección I<sup>2</sup>C: <h6 class="m-0 font-weight-bold" style="display: inline-block;" id='modal_i2c_${id}'>${i2c}</h6></h6><br>
+							<h6 style="display: inline-block;margin-right: 5px">Temperatura de placa:<h6 class="m-0 font-weight-bold" style="display: inline-block;"><span id='modal_pcbTemp_${id}'>${pcbTemp}</span>&#176;C</h6></h6><br>
+							<h6 style="display: inline-block;margin-right: 5px">Fecha de creación: <h6 class="m-0 font-weight-bold" style="display: inline-block;" id='modal_creationDate_${id}'>${creationDate}</h6></h6><br>
+							<h6 style="display: inline-block;margin-right: 5px">Última calibración: <h6 class="m-0 font-weight-bold" style="display: inline-block;" id='modal_calDate_${id}'>${calDate}</h6></h6><br>
+							<h6 style="display: inline-block;margin-right: 5px">Electrodos: <h6 class="m-0 font-weight-bold" style="display: inline-block;" id='modal_electrodes_${id}'>${eletrodesString}</h6></h6>
+							<hr/>
+
+							<h6 style="display: inline-block;margin-right: 5px">Voltaje de electrodos</h6>
+							${divVoltages}
+
+							<hr/>
+
+							<h6 style="display: inline-block;margin-right: 5px">Temperatura de electrodos</h6>
+							${divTemperatures}
+
+							<hr/>
+							<h6 style="display: inline-block;margin-right: 5px">Voltajes de referencia (2.5V)</h6>
+
+							${divRefs}
+
+							</div>
+							</div>
+							</div>
+							</div>`)
+
+
+
+						divConfigElectrodes = ""
+						for (var x = 0; x < electrodeCount; x++) {
+							divConfigElectrodes += `
+							<h6 style="display: inline-block;margin-right: 5px">Electrodo ${x+1}:</h6>
+							<div class="row" style="margin-bottom: 13px;">
+							<div class="col">
+							<input type="text" class="form-control" placeholder="Número de serie" id="asset_${id}_${x+1}">
+							</div>
+							<div class="col">
+							<input type="text" class="form-control" placeholder="Material" id="material_${id}_${x+1}">
+							</div>
+							</div>
+							`
+						}
+
+
+
+						$('#modals').append(`<div class="modal fade" id="configTonguePot_${id}" role="dialog" style="overflow-y: auto;">
+							<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+							<div class="modal-content">
+							<div class="modal-header">
+							<h5 class="modal-title" id="exampleModalLabel">Configuración Lengua ID: ${id}</i></h5>
+							<button class="close" type="button" data-dismiss="modal" aria-label="Close" onclick="$('#${target}').modal('show');">
+							<span aria-hidden="true">×</span>
+							</button>
+							</div>
+							<div class="modal-body">
+
+							<div class="alert alert-danger" role="alert">
+							Advertencia: Este panel de configuración para la lengua electrónica está diseñado para cambiar los IDs y materiales de los electrodos. Por favor, no modifique estos valores si no está autorizado para hacerlo, ya que una selección erronea provocará problemas de sincronización en los experimentos.
+							</div>
+
+							<form onsubmit="saveElectrodeChanges('${id}', ${electrodeCount}, '${target}', '${type}');return false;">
+							${divConfigElectrodes}
+
+							<button class="d-sm-inline-block btn btn-sm btn-primary shadow-sm float-right" style="margin-top:10px">Guardar cambios</button>
+
+							</form>
+
+							</div>
+							</div>
+							</div>
+							</div>`)
+					}
+
+					else if (type == "Voltamperométrica")
+					{
+
+						$('#modals').append(`<div class="modal fade" id="${target}" role="dialog" style="overflow-y: auto;">
+							<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+							<div class="modal-content">
+							<div class="modal-header">
+							<h5 class="modal-title" id="exampleModalLabel">Lengua electrónica ID: ${id} 
+
+							<i class="fas fa-cog fa-sm button" style="cursor:pointer;margin-left:10px" data-target="#configTongueVolt_${id}" data-toggle="modal" onclick="$('#${target}').modal('hide');requestElectrodesInfo(${id});"></i>
+
+							<i id="manualButton_${id}" class="fas fa-tools fa-sm button" style="cursor:pointer;margin-left:10px" data-target="#manualTongueVolt_${id}" onclick="if(readyForManual[${id}]){$('#${target}').modal('hide')}else{addErrorManual(${id})}"></i>
+
+							</h5>
+
+							<button class="close" type="button" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">×</span>
+							</button>
+							</div>
+							<div class="modal-body">
+
+							<div id='warnings_${id}'></div>
+
+							<h6 style="display: inline-block;margin-right: 5px">Estado: <h6 class="m-0 text-success font-weight-bold" style="display: inline-block;" id='modal_status_${id}'>${status}</h6></h6><br>
+							<h6 style="display: inline-block;margin-right: 5px">Número de electrodos: <h6 class="m-0 font-weight-bold" style="display: inline-block;" id='modal_electrodeCount_${id}'>${electrodeCount}</h6></h6><br>
+							<h6 style="display: inline-block;margin-right: 5px">Tipo: <h6 class="m-0 font-weight-bold" style="display: inline-block;" id='modal_type_${id}'>${type}</h6></h6><br>
+							<h6 style="display: inline-block;margin-right: 5px">Dirección I<sup>2</sup>C: <h6 class="m-0 font-weight-bold" style="display: inline-block;" id='modal_i2c_${id}'>${i2c}</h6></h6><br>
+							<h6 style="display: inline-block;margin-right: 5px">Temperatura de placa:<h6 class="m-0 font-weight-bold" style="display: inline-block;"><span id='modal_pcbTemp_${id}'>${pcbTemp}</span>&#176;C</h6></h6><br>
+							<h6 style="display: inline-block;margin-right: 5px">Fecha de creación: <h6 class="m-0 font-weight-bold" style="display: inline-block;" id='modal_creationDate_${id}'>${creationDate}</h6></h6><br>
+							<h6 style="display: inline-block;margin-right: 5px">Última calibración: <h6 class="m-0 font-weight-bold" style="display: inline-block;" id='modal_calDate_${id}'>${calDate}</h6></h6><br>
+							<h6 style="display: inline-block;margin-right: 5px">Electrodos: <h6 class="m-0 font-weight-bold" style="display: inline-block;" id='modal_electrodes_${id}'>${eletrodesString}</h6></h6><br>
+							<h6 style="display: inline-block;margin-right: 5px">Constantes de corriente: <h6 class="m-0 font-weight-bold" style="display: inline-block;" id='modal_currentConstants_${id}'>${currentConstantString}</h6></h6>
+							<hr/>
+
+
+
+
+							<h6 style="display: inline-block;margin-right: 5px">Voltaje de referencia</h6>
+							<div class="progress progress-sm mr-2" style="height: 20px;margin-bottom: 10px">
+							<div id = "divVoltages_${id}_ref" class="progress-bar bg-info" role="progressbar" style="width: ${10+(((5000+electrodeVoltages[electrodeVoltages.length-2])/100)*0.8)}%;height: 20px" aria-valuenow="${5000+electrodeVoltages[electrodeVoltages.length-2]}" aria-valuemin="0" aria-valuemax="5000">${electrodeVoltages[electrodeVoltages.length-2]} mV</div>
+							</div>
+
+
+
+							<h6 style="display: inline-block;margin-right: 5px">Voltaje de contra-electrodo</h6>
+							<div class="progress progress-sm mr-2" style="height: 20px;margin-bottom: 10px">
+							<div id = "divVoltages_${id}_count" class="progress-bar bg-alert" role="progressbar" style="width: ${10+(((5000+electrodeVoltages[electrodeVoltages.length-1])/100)*0.8)}%;height: 20px" aria-valuenow="${5000+electrodeVoltages[electrodeVoltages.length-1]}" aria-valuemin="0" aria-valuemax="5">${electrodeVoltages[electrodeVoltages.length-1]} mV</div>
+							</div>
+
+							<h6 style="display: inline-block;margin-right: 5px">Temperatura del líquido</h6>
+							<div class="progress progress-sm mr-2" style="height: 20px;margin-bottom: 10px">
+							<div id = "divTemperatures_${id}_liq" class="progress-bar bg-danger" role="progressbar" style="width: ${electrodeTemperatures[0]}%;height: 20px" aria-valuenow="${electrodeTemperatures[0]}" aria-valuemin="0" aria-valuemax="100">${electrodeTemperatures[0]} &#176;C</div>
+							</div>
+
+
+
+							</div>
+							</div>
+							</div>
+							</div>`)
+
+
+
+
+divConfigElectrodes = ""
+
+for (var x = 0; x < electrodeCount; x++) {
+	divConfigElectrodes += `
+	<h6 style="display: inline-block;margin-right: 5px">Electrodo ${x+1}:</h6>
+	<div class="row" style="margin-bottom: 13px;">
+	<div class="col">
+	<input type="text" class="form-control" placeholder="Número de serie" id="asset_${id}_${x+1}">
+	</div>
+	<div class="col">
+	<input type="text" class="form-control" placeholder="Material" id="material_${id}_${x+1}">
+	</div>
+	<div class="col">
+	<input type="number" step="0.01" min="0.01" class="form-control" placeholder="C. de corriente" id="currentConstant_${id}_${x+1}">
+	</div>
+	</div>
+	`
+}
+
+
+
+$('#modals').append(`<div class="modal fade" id="configTongueVolt_${id}" role="dialog" style="overflow-y: auto;">
+	<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+	<div class="modal-content">
+	<div class="modal-header">
+	<h5 class="modal-title" id="exampleModalLabel">Configuración Lengua ID: ${id}</i></h5>
+	<button class="close" type="button" data-dismiss="modal" aria-label="Close" onclick="$('#${target}').modal('show');">
+	<span aria-hidden="true">×</span>
+	</button>
+	</div>
+	<div class="modal-body">
+
+	<div class="alert alert-danger" role="alert">
+	Advertencia: Este panel de configuración para la lengua electrónica está diseñado para cambiar los IDs y materiales de los electrodos. Por favor, no modifique estos valores si no está autorizado para hacerlo, ya que una selección erronea provocará problemas de sincronización en los experimentos.
+	</div>
+
+	<form onsubmit="saveElectrodeChanges('${id}', ${electrodeCount}, '${target}', '${type}');return false;">
+
+	${divConfigElectrodes}
+
+	<button class="d-sm-inline-block btn btn-sm btn-primary shadow-sm float-right" style="margin-top:10px">Guardar cambios</button>
+
+	</form>
+
+	</div>
+	</div>
+	</div>
+	</div>`)
+
+
+
+
+
+						//Modal manual control
+
+
+						divElectrodesManual = ""
+						auxVal = "checked"
+						for (var x = 0; x < electrodeCount; x++) {
+							divElectrodesManual += `
+							<div class="form-check">
+							<input disabled name="radios_${id}" class="form-check-input" type="radio" id="radio_${id}_${x}" value="${data.tongueElectrodesArray[i][x]}" ${auxVal} onchange="sendManualCommand(${id})">
+							<label class="form-check-label" for="radio_${id}_${x}">
+							<span id="labelfor_radio_${id}_${x}">${data.tongueElectrodesArray[i][x]}</span>: <b><span id="current_${id}_${x}">${((electrodeVoltages[x]*1000)/data.tongueCurrentConstantsArray[i][x]).toFixed(2)}</span> &micro;A</b>
+							</label>
+							</div>
+							`
+							auxVal = ""
+						}
+
+
+
+						$('#modals').append(`<div class="modal fade" id="manualTongueVolt_${id}" role="dialog" style="overflow-y: auto;">
+							<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+							<div class="modal-content">
+							<div class="modal-header">
+							<h5 class="modal-title" id="exampleModalLabel">Control manual de lengua (ID: ${id})</i></h5>
+							<button class="close" type="button" data-dismiss="modal" aria-label="Close" onclick="$('#${target}').modal('show');">
+							<span aria-hidden="true">×</span>
+							</button>
+							</div>
+							<div class="modal-body">
+
+							<div id="warnings_manual_${id}">
+
+							<div class="alert alert-danger" role="alert">
+							Advertencia: este panel permite el control manual de la lengua electrónica, su uso incorrecto puede causar problemas de funcionamiento en el dispositivo. No lo utilice si no está autorizado para hacerlo.
+							</div>
+
+							</div>
+
+							
+
+
+							<h6 style="display: inline-block;margin-right: 5px">Estado: <h6 class="m-0 text-success font-weight-bold" style="display: inline-block;" id='modal_manual_status_${id}'>${status}</h6></h6><br>
+							<h6 style="display: inline-block;margin-right: 5px">Temperatura de placa:<h6 class="m-0 font-weight-bold" style="display: inline-block;"><span id='modal_manual_pcbTemp_${id}'>${pcbTemp}</span>&#176;C</h6></h6><br>
+							<h6 style="display: inline-block;margin-right: 5px">Electrodos: <h6 class="m-0 font-weight-bold" style="display: inline-block;" id='modal_manual_electrodes_${id}'>${eletrodesString}</h6></h6><br>
+							<h6 style="display: inline-block;margin-right: 5px">Constantes de corriente: <h6 class="m-0 font-weight-bold" style="display: inline-block;" id='modal_manual_currentConstants_${id}'>${currentConstantString}</h6></h6>
+
+
+
+							<hr>
+
+
+
+
+							<h6 style="display: inline-block;margin-right: 5px">Voltaje de referencia</h6>
+							<div class="progress progress-sm mr-2" style="height: 20px;margin-bottom: 10px">
+							<div id = "divVoltages_modal_${id}_ref" class="progress-bar bg-info" role="progressbar" style="width: ${10+(((5000+electrodeVoltages[electrodeVoltages.length-2])/100)*0.8)}%;height: 20px" aria-valuenow="${5000+electrodeVoltages[electrodeVoltages.length-2]}" aria-valuemin="0" aria-valuemax="5000">${electrodeVoltages[electrodeVoltages.length-2]} mV</div>
+							</div>
+
+
+
+							<h6 style="display: inline-block;margin-right: 5px">Voltaje de contra-electrodo</h6>
+							<div class="progress progress-sm mr-2" style="height: 20px;margin-bottom: 10px">
+							<div id = "divVoltages_modal_${id}_count" class="progress-bar bg-alert" role="progressbar" style="width: ${10+(((5000+electrodeVoltages[electrodeVoltages.length-1])/100)*0.8)}%;height: 20px" aria-valuenow="${5000+electrodeVoltages[electrodeVoltages.length-1]}" aria-valuemin="0" aria-valuemax="5">${electrodeVoltages[electrodeVoltages.length-1]} mV</div>
+							</div>
+
+							<h6 style="display: inline-block;margin-right: 5px">Temperatura del líquido</h6>
+							<div class="progress progress-sm mr-2" style="height: 20px;margin-bottom: 10px">
+							<div id = "divTemperatures_modal_${id}_liq" class="progress-bar bg-danger" role="progressbar" style="width: ${electrodeTemperatures[0]/0.5}%;height: 20px" aria-valuenow="${electrodeTemperatures[0]}" aria-valuemin="0" aria-valuemax="50">${electrodeTemperatures[0]} &#176;C</div>
+							</div>
+
+
+
+							<hr>
+
+							<div style='width: 100%;height: 3rem;'>
+
+							<div class="float-right custom-control custom-switch custom-switch-md" style="cursor:pointer">
+							<input type="checkbox" class="custom-control-input" id="customSwitch_${id}" style="cursor:pointer">
+							<label class="custom-control-label" for="customSwitch_${id}" style="cursor:pointer;line-height: 1.8rem;padding-left: 1rem;">Control manual</label>
+							</div>
+
+							</div>
+
+
+
+							<h5 style="display: inline-block;margin-right: 5px">Control de voltaje: <b><span id='cVoltage_${id}'>0</span> mV</b></h5><br>
+
+
+							<label>-5000mV</label> <label class="float-right">5000mV</label>
+							<input disabled type="range" min="-5000" max="5000" class="custom-range" id="voltageRange_${id}" oninput='throttleFunction(function(){$("#cVoltage_${id}").html($("#voltageRange_${id}").val());sendManualCommand(${id})}, 200)'>
+
+
+							<br><br>
+
+							<h5 style="display: inline-block;margin-right: 5px">Electrodo activo</h5>
+
+							${divElectrodesManual}
+
+
+							<br><br>
+
+
+							</div>
+							</div>
+							</div>
+							</div>`)
+
+
+$('#customSwitch_'+id).click(function(e){
+
+	e.preventDefault();
+
+	
+	if( $("#customSwitch_"+this.id.split("_")[1]).prop('checked') )
+	{
+		mainSocket.send(JSON.stringify({'innerType':'declareManualControl', 'id': this.id.split("_")[1]}))
+	}
+	else
+	{
+		mainSocket.send(JSON.stringify({'innerType':'removeManualControl', 'id': this.id.split("_")[1]}))
+		$("#customSwitch_"+this.id.split("_")[1]).prop('checked', false);
+	}
+	
+
+});
+
+
+$('#manualTongueVolt_'+id).off().on('hidden.bs.modal', function (e) {
+	if (currentVoltamperometricManual != -1)
+	{
+		mainSocket.send(JSON.stringify({'innerType':'removeManualControl', 'id': currentVoltamperometricManual}))
+	}
+	
+})
+
+
+
+
+
+
+
+
+}
+
+tongueIDcurrent.push(id)
+
+}
+
+}
+}
+
+
+
+else if(data.innerType == "notAvailableManual")
+{
+	$("#warnings_manual_"+data.id).append(`
+		<div class="alert alert-danger alert-dismissible fade show">
+		<button type="button" class="close" data-dismiss="alert" style="font-size: 1.4rem;line-height: 1.2rem;">&times;</button>
+		La lengua electrónica no se encuentra disponible para control manual
+		</div>`)
+}
+
+else if(data.innerType == "availableManual")
+{
+	$("#customSwitch_"+data.id).prop('checked', true);
+	$("#voltageRange_"+data.id).removeAttr('disabled');
+	$("[name=radios_"+data.id+"]").removeAttr('disabled')
+	currentVoltamperometricManual = data.id
+
+}
+
+else if(data.innerType == "removedManualSuccess")
+{
+	$("#customSwitch_"+data.id).prop('checked', false);
+	$("#voltageRange_"+data.id).attr('disabled', "");
+	$("[name=radios_"+data.id+"]").attr('disabled', "")
+	$("#voltageRange_"+data.id).val(0)
+	$("#cVoltage_"+data.id).html(0)
+	$($("[name=radios_"+data.id+"]")[0]).prop("checked", true)
+	currentVoltamperometricManual = -1
+	
+}
+
+
+
+else if (data.innerType == "addNotification")
+{
+	pushNotification(data.id_generated, data.date, data.severity, data.message)
+}
+
+else if(data.innerType == "requestedElectrodesInfo")
+{
+	for (var i = 0; i < data.materials.length; i++) {
+
+		$("#material_"+data.idRequested+"_"+(i+1)).val(data.materials[i])
+		$("#asset_"+data.idRequested+"_"+(i+1)).val(data.assets[i])
+
+		if (data.tongueType == "Voltamperométrica") {
+			$("#currentConstant_"+data.idRequested+"_"+(i+1)).val(data.currentConstants[i])
+		}
+
+	}
+}
+
+
+
+}
+
+var  timerId;
+var  throttleFunction  =  function (func, delay) {
+	if (timerId) {
+		return
+	}
+
+	timerId  =  setTimeout(function () {
+		func()
+		timerId  =  undefined;
+	}, delay)
+}
+
+
+function addErrorManual(id_add) {
+
+	$("#warnings_"+id_add).append(`
+		<div class="alert alert-danger alert-dismissible fade show">
+		<button type="button" class="close" data-dismiss="alert" style="font-size: 1.4rem;line-height: 1.2rem;">&times;</button>
+		No es posible realizar control manual de la lengua ya que los electrodos no se encuentran configurados
+		</div>`)
+}
+
+
+function sendManualCommand(id_command) {
+
+	activeElectrode = $('input[name="radios_'+id_command+'"]:checked').attr('id').split("_")[2]
+	currentVoltage = $("#voltageRange_"+id_command).val()
+
+	mainSocket.send(JSON.stringify({'innerType':'voltManualTongueCommand', 'id': id_command, 'activeElectrode':activeElectrode, 'currentVoltage':currentVoltage}))
+	
+}
+
+
+notificationTotal = 0
+
+function pushNotification(idNot, date, severity, message) {
+
+	notificationTotal+=1
+
+	$("#notificationsCounter").html(notificationTotal)
+	$("#notificationsCounter").css("visibility", "inherit")
+
+	if(severity == 0)
+	{
+		icon = "info"
+		color = "info"
+	}
+	else if(severity == 1)
+	{
+		icon = "exclamation-triangle"
+		color = "warning"
+	}
+	else if(severity == 2)
+	{
+		icon = "exclamation-circle"
+		color = "danger"
+	}
+	else if(severity == 3)
+	{
+		icon = "exclamation-square"
+		color = "danger"
+	}
+
+
+	$('#notifications').append(`<div id="${idNot}"><a class="dropdown-item d-flex align-items-center alert alert-dismissible" style="margin-bottom: 0px">
+		<button type="button" class="close" data-dismiss="alert" style="top: 50%;margin-top: -28px" onclick="removeNotification('${idNot}')">&times;</button>
+		<div class="mr-3">
+		<div class="icon-circle bg-${color}">
+		<i class="fas fa-${icon} text-white"></i>
+		</div>
+		</div>
+		<div align="justify">
+		<div class="small text-gray-500">${date}</div>
+		${message}
+		</div>
+		</a></div>`)
+}
+
+function removeNotification(idToRemove) {
+	notificationTotal-=1
+	$("#notificationsCounter").html(notificationTotal)
+	if(notificationTotal == 0)
+		$("#notificationsCounter").css("visibility", "hidden")
+	mainSocket.send(JSON.stringify({'innerType':'removeNotification', 'idNotification': idToRemove}))
+
+}
+
+function scanI2C() {
+	mainSocket.send(JSON.stringify({'innerType':'scanI2C'}))
+	$("#scanI2CButton").toggleClass("disabled")
+	$("#scanI2CButton").attr("onclick","")
+	setTimeout(enableScanI2C, 3000)
+}
+
+function enableScanI2C() {
+	$("#scanI2CButton").toggleClass("disabled")
+	$("#scanI2CButton").attr("onclick","scanI2C()")
+}
+
+function requestElectrodesInfo(idToRequest) {
+	mainSocket.send(JSON.stringify({'innerType':'getTongueElectrodes', 'idRequested':idToRequest}))
+}
+
+function saveElectrodeChanges(idToRequest, electrodeCount, target, type) {
+
+	dataMaterials = []
+	dataAssets = []
+	dataCurrentConstants = []
+	for (var i = 0; i < electrodeCount; i++) {
+		dataMaterials.push($("#material_"+idToRequest+"_"+(i+1)).val())
+		dataAssets.push($("#asset_"+idToRequest+"_"+(i+1)).val())
+
+		if (type == "Voltamperométrica")
+		{
+			dataCurrentConstants.push($("#currentConstant_"+idToRequest+"_"+(i+1)).val())
+		}
+	}
+
+	var r = confirm("Guardar estos cambios eliminará TODAS las calibraciones de este dispositivo. ¿Está seguro que desea hacerlo?");
+	if (r == true) {
+
+		$('#warnings_'+idToRequest).children().remove()
+
+		if($("#status_"+idToRequest).html() == "En espera")
+		{
+			if((new Set(dataMaterials.filter(a => a !== ''))).size !== dataMaterials.filter(a => a !== '').length)
+			{
+
+				$('#warnings_'+idToRequest).append(`
+					<div class="alert alert-danger alert-dismissible fade show">
+					<button type="button" class="close" data-dismiss="alert" style="font-size: 1.4rem;line-height: 1.2rem;">&times;</button>
+					Todos los materiales presentes en la lengua electrónica deben tener un nombre diferente. Verifique que sean diferentes e inténtelo de nuevo.
+					</div>`)
+			}
+			else
+			{
+				mainSocket.send(JSON.stringify({'innerType':'saveElectrodeChanges', 'idRequested':idToRequest, 'dataMaterials':dataMaterials, 'dataAssets': dataAssets, 'type': type, 'dataCurrentConstants': dataCurrentConstants}))
+			}
+		}
+		else
+		{
+
+			$('#warnings_'+idToRequest).append(`
+				<div class="alert alert-danger alert-dismissible fade show">
+				<button type="button" class="close" data-dismiss="alert" style="font-size: 1.4rem;line-height: 1.2rem;">&times;</button>
+				El dispositivo seleccionado (ID: ${idToRequest}) se encuentra en calibración, experimento o presenta errores. Por favor verifíquelo e inténtelo de nuevo.
+				</div>`)
+		}
+
+		if(type == "Potenciométrica")
+		{
+			$('#configTonguePot_'+idToRequest).modal('hide');
+			$('#'+target).modal('show');
+		}
+		else if (type == "Voltamperométrica")
+		{
+			$('#configTongueVolt_'+idToRequest).modal('hide');
+			$('#'+target).modal('show');
+		}
+	}
+
+}
+
+</script>
+
+
+
+</html>

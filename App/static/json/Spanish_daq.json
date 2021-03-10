@@ -1,0 +1,33 @@
+
+
+{
+	"sProcessing":     "Procesando...",
+	"sLengthMenu":     "Mostrar _MENU_ adquisiciones de datos",
+	"sZeroRecords":    "No se han encontrado adquisiciones de datos",
+	"sEmptyTable":     "No se han encontrado adquisiciones de datos",
+	"sInfo":           "Mostrando adquisiciones de datos del _START_ al _END_ de un total de _TOTAL_ adquisiciones de datos",
+	"sInfoEmpty":      "Mostrando adquisiciones de datos del 0 al 0 de un total de 0 adquisiciones de datos",
+	"sInfoFiltered":   "(filtrado de un total de _MAX_ adquisiciones de datos)",
+	"sInfoPostFix":    "",
+	"sSearch":         "Buscar:",
+	"sUrl":            "",
+	"sInfoThousands":  ",",
+	"sLoadingRecords": "Cargando...",
+	"oPaginate": {
+		"sFirst":    "Primero",
+		"sLast":     "Último",
+		"sNext":     "Siguiente",
+		"sPrevious": "Anterior"
+	},
+	"oAria": {
+		"sSortAscending":  ": Activar para ordenar la columna de manera ascendente",
+		"sSortDescending": ": Activar para ordenar la columna de manera descendente"
+	},
+	"select": {
+		"rows": {
+			"_": "%d adquisiciones de datos seleccionados",
+			"0": "",
+			"1": "%d adquisición de datos seleccionado"
+		}
+	}
+}
