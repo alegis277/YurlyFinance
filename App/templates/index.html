@@ -153,8 +153,8 @@
 			<!-- Nav Item - Dashboard -->
 			<li class="nav-item active">
 				<a class="nav-link" href="/">
-					<i class="fas fa-fw fa-tachometer-alt"></i>
-					<span>Estado</span></a>
+					<i class="fas fa-fw fa-chart-line"></i>
+					<span>Resumen de portafolio</span></a>
 				</li>
 
 				<!-- Divider -->
@@ -162,7 +162,7 @@
 
 				<!-- Heading -->
 				<div class="sidebar-heading">
-					Adquisición
+					Mis acciones
 				</div>
 
 				<!-- Nav Item - Pages Collapse Menu -->
@@ -173,56 +173,11 @@
 					</a>
 				</li>
 
-				<li class="nav-item">
-					<a class="nav-link" href="/dataAcquisition">
-						<i class="fas fa-fw fa-chart-area"></i>
-						<span>Adquirir datos</span>
-					</a>
-				</li>
-
-				<li class="nav-item">
-					<a class="nav-link" href="/calibrations">
-						<i class="fas fa-fw fa-ruler-triangle"></i>
-						<span>Calibraciones</span>
-					</a>
-				</li>
 
 				<!-- Heading -->
-				<div class="sidebar-heading" style="margin-top: 20px;">
-					Entrenamiento
+				<div class="sidebar-heading">
+					Históricos
 				</div>
-
-
-				<li class="nav-item">
-					<a class="nav-link" href="/exportData">
-						<i class="fas fa-fw fa-download"></i>
-						<span>Exportar datos</span>
-					</a>
-				</li>
-
-
-
-				<!-- Heading -->
-				<div class="sidebar-heading" style="margin-top: 20px;">
-					Configuración
-				</div>
-
-				<!-- Nav Item - Pages Collapse Menu -->
-
-				<li class="nav-item">
-					<label class="nav-link collapsed" data-toggle="collapse" data-target="#collapseConfigLengua" aria-expanded="true" aria-controls="collapseConfigLengua" style="cursor: pointer;">
-						<i class="fas fa-fw fa-cog"></i>
-						<span>Lengua</span>
-					</label>
-					<div id="collapseConfigLengua" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-						<div class="bg-white py-2 collapse-inner rounded">
-							<h6 class="collapse-header">Lengua:</h6>
-							<a class="collapse-item" href="/basicConfiguration">Configuración básica</a>
-							<a class="collapse-item" href="/advancedConfiguration">Configuración avanzada</a>
-						</div>
-					</div>
-				</li>
-
 
 
 
@@ -250,28 +205,6 @@
 					<ul class="navbar-nav ml-auto">
 
 
-						<!-- Nav Item - Alerts -->
-						<li class="nav-item dropdown no-arrow mx-1">
-							<a class="nav-link dropdown-toggle" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								<i class="fas fa-bell fa-fw"></i>
-								<!-- Counter - Alerts -->
-								<span class="badge badge-danger badge-counter" style="visibility: hidden;" id="notificationsCounter">0</span>
-							</a>
-							<!-- Dropdown - Alerts -->
-							<div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown" id="innerDrop">
-								<h6 class="dropdown-header">
-									Centro de notificaciones
-								</h6>
-
-								<div id = 'notifications'>
-								</div>
-
-								<a class="dropdown-item text-center small text-gray-500" href="#">Mostrar todos los registros</a>
-							</div>
-						</li>
-
-
-
 						<div class="topbar-divider d-none d-sm-block"></div>
 
 						<!-- Nav Item - User Information -->
@@ -284,12 +217,8 @@
 							<!-- Dropdown - User Information -->
 							<div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
 								<a class="dropdown-item" href="#">
-									<i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-									Mis permisos
-								</a>
-								<a class="dropdown-item" href="#">
-									<i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-									Registro de actividad
+									<i class="fas fa-key fa-sm fa-fw mr-2 text-gray-400"></i>
+									Cambiar contraseña
 								</a>
 								<div class="dropdown-divider"></div>
 								<a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
@@ -309,8 +238,7 @@
 
 					<!-- Page Heading -->
 					<div class="d-sm-flex align-items-center justify-content-between mb-4">
-						<h1 class="h3 mb-0 text-gray-800">Estado del sistema</h1>
-						<label class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" onclick="scanI2C()" id="scanI2CButton"><i class="fas fa-sync-alt fa-sm text-white-50"></i> Escanear I<sup>2</sup>C</label>
+						<h1 class="h3 mb-0 text-gray-800">Resumen de portafolio</h1>
 					</div>
 
 					<!-- Content Row -->

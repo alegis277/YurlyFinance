@@ -1,0 +1,99 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta charset="utf-8">
+	<title>Yurly Finance</title>
+	<meta name="description" content="Aplicación de financias para el FIC Yurly">
+	<meta property="og:title" content="Yurly Finance" />
+	<meta property="og:description" content="Aplicación de financias para el FIC Yurly">
+	<meta property="og:image" content="https://staticyurlyfinance.s3.us-east-2.amazonaws.com/static/trii.png">
+	<meta property="og:type" content="dashboard" />
+	<meta property="og:locale" content="es_CO" />
+	<meta name="referrer" content="no-referrer-when-downgrade">
+	<meta name="format-detection" content="telephone=no">
+
+
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<link href="{% static 'css/style_login.css' %}" rel="stylesheet">
+
+	<style type="text/css">
+	.container-login100 {
+		width: 100%;  
+		min-height: 100vh;
+
+		background-repeat: no-repeat;
+		background-position: right;
+		background-size: cover;
+		position: relative;
+		z-index: 1;  
+	}
+	</style>
+
+</head>
+
+
+<body class="img js-fullheight container-login100" style="background-image: url({% static 'img/bg.jpg' %});">
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+					<h2 class="heading-section">Yurly Finance</h2>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-md-6 col-lg-4">
+					<div class="login-wrap p-0">
+						<h3 class="mb-4 text-center">Iniciar sesión</h3>
+						{% if errors %}
+						<div class="alert alert-danger alert-dismissible fade show" style="background-color: #af877e6e">
+							<button type="button" class="close" data-dismiss="alert">&times;</button>
+							Usuario o contraseña incorrecta.
+						</div>
+						{% endif %}
+						<form class="signin-form" action="/login/" method="POST">
+							{% csrf_token %}
+							<div class="form-group">
+								{{ form.username }}
+							</div>
+							<div class="form-group">
+								{{ form.password }}
+								<span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+							</div>
+							<div class="form-group">
+								<button type="submit" class="form-control btn btn-primary submit px-3">Entrar</button>
+							</div>
+							<div class="form-group d-md-flex">
+								<div class="w-50">
+									<label class="checkbox-wrap checkbox-primary">Recordar mi cuenta
+										{{ form.remember_me }}
+										<span class="checkmark"></span>
+									</label>
+								</div>
+
+							</div>
+						</form>
+						<p class="w-100 text-center">&mdash; Otras opciones &mdash;</p>
+						<div class="social d-flex text-center">
+							<a target="_blank" href="https://wa.me/573016583977" class="px-2 py-2 mr-1 rounded">Soporte</a>
+							<a target="_blank" href="https://www.bvc.com.co/pps/tibco/portalbvc/Home/Mercados/enlinea/acciones" class="px-2 py-2 ml-1 rounded">BVC acciones</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.6.0/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<script src="{% static 'js/main_login.js' %}"></script>
+
+
+</body>
+</html>
+

@@ -10,4 +10,5 @@ from . import views
 urlpatterns = [
     path('', views.index, name='index'),
     path('favicon.ico', favicon_view, name='favicon'),
+    path('login/', views.login, name='login'),
 ]
